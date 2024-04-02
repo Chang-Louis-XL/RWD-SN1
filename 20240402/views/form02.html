@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container{
+            width: 20%;
+            margin:auto;
+        }
+    </style>
+    <!-- 外框設定 -->
+</head>
+
+
+<body>
+
+    <!-- 無語意的block -->
+
+    <div class="container">
+        <form action="" method="get">
+            <fieldset >
+                <legend>個人履歷:</legend>
+                <p>
+                    <label for="name">姓名</label>
+                    <input type="text" name="" id="name">
+                </p>
+
+                <p>
+                    <label for="price">手機號碼</label>
+                    <input type="number" name="" id="price">
+                </p>
+
+
+                <!--input : text 文字輸入  -->
+                <!-- input : number 文字輸入 -->
+                <!-- check box 多選 -->
+                <hr>
+                <!-- input :text => select 下拉選單-->
+
+                <label for="myselect">english level</label>
+                <select name="" id="mySelect">
+                    <option value="">簡單</option>
+                    <option value="">普通</option>
+                    <option value="">流暢</option>
+                </select>
+
+                <hr>
+                <!-- radio 單選-->
+
+                <label for="gender">性別</label><br>
+                <input type="radio" name="gender" id="" value="">
+                <label for="">男</label>
+                <input type="radio" name="gender" id="" value="">
+                <label for="">女</label>
+
+                <hr>
+                <!-- checkbox 多選 -->
+
+                <label for="">運動愛好</label><br>
+                <input type="checkbox" name="love[]" id="" value="健身">
+                <label for="">健身</label>
+                <input type="checkbox" name="love[]" id="" value="打籃球">
+                <label for="">打籃球</label>
+                <input type="checkbox" name="love[]" id="" value="游泳">
+                <label for="">游泳</label>
+                <!-- textarea 多行文字 -->
+                <hr>
+               <p class="center">面試原因:</p> 
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                
+                <hr>
+    
+                <label for="date">應徵日期:</label>
+                <input type="date" name="" id="" value="2024-04-02">
+                
+                <hr>
+            <p><input type="submit" value="submit"></p>
+
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+
+</html>
