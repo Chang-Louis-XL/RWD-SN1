@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Phone Number Input Table</title>
     <style>
         table {
-            width: 100%;
+            width: 50%;
             border-collapse: collapse;
+            background-color: rgba(251, 255, 196, 0.384);
         }
 
         th, td {
@@ -19,36 +20,41 @@
         th {
             background-color: #f2f2f2;
         }
+
+        input[type="tel"] {
+            width: 50%;
+            padding: 8px;
+        }
     </style>
 </head>
 <body>
 
-<h2>Resume</h2>
+<h2>Phone Number Input Table</h2>
 
 <table>
     <tr>
         <th>Name:</th>
-        <td>John Doe</td>
+        <td><input type="text" name="name"></td>
     </tr>
     <tr>
         <th>Email:</th>
-        <td>john@example.com</td>
+        <td><input type="email" name="email"></td>
     </tr>
     <tr>
         <th>Phone:</th>
-        <td>123-456-7890</td>
+        <td><input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890"></td>
     </tr>
     <tr>
         <th>Education:</th>
-        <td>Bachelor of Science in Computer Science</td>
+        <td><input type="text" name="education"></td>
     </tr>
     <tr>
         <th>Experience:</th>
-        <td>Software Developer at XYZ Company (2018 - Present)</td>
+        <td><input type="text" name="experience"></td>
     </tr>
     <tr>
         <th>Skills:</th>
-        <td>HTML, CSS, JavaScript, Python, etc.</td>
+        <td><input type="text" name="skills"></td>
     </tr>
 </table>
 
