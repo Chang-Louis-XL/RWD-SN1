@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .table01 {
+        .tr01 {
             margin: auto;
-            width: auto;
-            background-color:lightyellow;
         }
 
         th,
@@ -23,7 +21,15 @@
             border: 1px solid black;
             margin: auto;
             width: auto;
-            background-color:lightyellow;
+            background-color: lightyellow;
+        }
+
+        .submit-button {
+
+            background-image: url('./image/send.png');
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            padding-left: 30px;
         }
     </style>
 </head>
@@ -65,8 +71,12 @@
                         <input type="checkbox" name="sports{}">健身
                     </td>
                 </tr>
+                <te>
+                    <td>技能</td>
+                    <td> <textarea name="" id="" cols="30" rows="3" placeholder="ex: css、html、php"></textarea></td>
+                </te>
                 <tr>
-                    <td>面試原因</td>
+                    <td>工作經歷</td>
                     <td>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                     </td>
@@ -75,6 +85,12 @@
                     <td>面試日期</td>
                     <td><input type="date" value="2024-04-03"></td>
                 </tr>
+                <tr class="tr01">
+                    <!-- <td colspan="2"><input type="submit" value="submit"></td> -->
+                    <!-- <td colspan="2"> <button type="submit"><img src="./image/send.png" alt="Submit"></button></td> -->
+                    <td colspan="2"><button type="submit" class="submit-button">Submit</button></td>
+                </tr>
+
         </form>
         </table>
     </div>
