@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Input Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            background-color: rgba(251, 255, 196, 0.384);
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="tel"] {
+            width: 50%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Phone Number Input Table</h2>
+
+<table>
+    <tr>
+        <th>Name:</th>
+        <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td><input type="email" name="email"></td>
+    </tr>
+    <tr>
+        <th>Phone:</th>
+        <td><input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890"></td>
+    </tr>
+    <tr>
+        <th>Education:</th>
+        <td><input type="text" name="education"></td>
+    </tr>
+    <tr>
+        <th>Experience:</th>
+        <td><input type="text" name="experience"></td>
+    </tr>
+    <tr>
+        <th>Skills:</th>
+        <td><input type="text" name="skills"></td>
+    </tr>
+</table>
+
+</body>
+</html>
