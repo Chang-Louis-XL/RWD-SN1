@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+    tr,td,th {
+        color: black;
+        border: solid 1px;
+        text-align: center;
+    }
+
+    tr:nth-child(even){
+        background-color: #ccc
+    }
+
+    td:hover{
+        background-color: pink;
+        font-size: x-large;
+    }
+
+    .price::after{
+        content: '元';
+    }
+    .price::before{
+        content: '$';
+    }
+
+</style>
+
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>ID</th width=15% >
+                <th>商品名稱</th>
+                <th>價格</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>咖啡</td>
+                <td class="price">100</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>花茶</td>
+                <td class="price">200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>礦泉水</td>
+                <td class="price">50</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+</body>
+
+</html>
