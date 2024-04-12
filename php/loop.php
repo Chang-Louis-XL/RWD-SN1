@@ -89,5 +89,57 @@ echo "<br>";
 echo "調整結果=" .$score;
 ?>
 
+<h2>foreach :</h2>
+<p>$score=[60,22,72,10,80];<br>
+foreach($scroe as $idx => $val){<br>
+    echo '第' . $idx . '位同學的成績為' . $val ;<br>
+}</p>
+
+<table>
+    <tr>
+        <td>idx</td>
+        <td>val</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>72</td>
+    </tr>
+</table>
+
+<h2>巢狀結構 :</h2>
+<?php 
+
+$show=false;
+for($i=0 ; $i<10 ; $i++){
+    echo $i*10 ;
+
+    if($i>5 && $show==false){
+        echo "<br>";
+        echo "執行一半了...";
+        $show=true;
+    }
+    echo "<br>";
+}
+echo "<br>";
+
+<h>若指定值為0或空值，比較後狀況為False</h2>
+$a=0;
+if($a){
+echo "O";
+}else{
+echo "X";
+}
+
+
+?>
+
 </body>
 </html>
