@@ -119,10 +119,14 @@ $target= //尋找的字
 $position=0//起始位置
 
 //當尋找字，不等於(字串、起始位置、取字的長度)
-while($taget!=mb_substr($str,$position,mb_strlen($position))){
 
-    
+while($target!=mb_substr($str,$position,mb_strlen($target))){
+
+// echo "p=".$position;
+// echo", substr= ". mb_substr($str,,$position,mb_strlen($position));
+// echo "<br>";
 //起始的位置加1
+
 $position=$position+1;
 }
 
