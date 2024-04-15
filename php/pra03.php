@@ -7,6 +7,7 @@
 
 <title>畫星星</title>
     <style>
+        /* 讓字形大小相同 */
         *{
             font-family: 'Courier New', Courier, monospace;
         }
@@ -16,7 +17,7 @@
 <h2>直角三角形</h2>    
 
 <?php
-$stars=7;
+$stars=5;
 
 for($i=0;$i<$stars;$i++){
     for($j=0;$j<=$i;$j++){
@@ -25,8 +26,8 @@ for($i=0;$i<$stars;$i++){
     echo "<br>";
 }
 
-// i=0 j=1 有一顆
-// i=1 j=2 有兩顆
+// i=0 j=1 加一顆
+// i=1 j=2 加兩顆
 
 ?>
 <h2>倒直角三角形</h2>    
@@ -55,6 +56,33 @@ for($i=0;$i<$stars;$i++){
 }
 
 ?>
+
+<h2>菱形</h2>
+
+<?php
+for($i=0;$i<$stars;$i++){
+    for($k=0;$k<$stars-1-$i;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$i*2+1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+}
+for($i=$stars-1;$i>0;$i--){
+    for($k=0;$k<$stars-$i;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$i*2-1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+}
+?>
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
