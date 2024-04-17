@@ -94,6 +94,7 @@ for($i=0;$i<$stars;$i++){
     for($i=$stars-1;$i>0;$i--){
         for($k=0;$k<$stars-$i;$k++){
             echo "&nbsp";
+            echo $tmp;
         }
 
         for($j=0;$j<$i*2-1;$j++){

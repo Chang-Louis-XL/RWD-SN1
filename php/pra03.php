@@ -112,8 +112,9 @@ for($i=0;$i<$stars;$i++){
 
     for($k=0;$k<$mid-$tmp;$k++){
         echo "&nbsp;";
-    }
-
+        
+    }   
+    echo $tmp;
     for($j=0;$j<$tmp*2+1;$j++){
         echo "*";
     }
