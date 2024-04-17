@@ -41,6 +41,7 @@
     <?php
         
         for ($i=5;$i>0;$i--){
+            echo "$i";
 
               for($j=0;$j<$i;$j++){
                 
@@ -96,7 +97,7 @@ for($i=0;$i<$stars;$i++){
         }
 
         for($j=0;$j<$i*2-1;$j++){
-            echo "*";
+            echo "$j";
         }
         echo "<br>";
     }
@@ -108,7 +109,8 @@ for($i=0;$i<$stars;$i++){
 <?php
 
 $stars=7;
-
+// odd=star%2若為0極為偶數，?判斷的意思，若不是將加1，若是將保持原本的stars
+// mid=計算中間值為何?算法為值+1後/2極為中間值。
 $odd=($stars%2==0)?$stars+1:$stars;
 $mid=(($odd+1)/2)-1;
 

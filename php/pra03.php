@@ -63,7 +63,41 @@ for($i=0;$i<$stars;$i++){
 
 <?php
 
+// 確認基數的值，若除後不是基數就-1
+$odd=($stars%2==0)?$stars+1:$stars;
+// 確認中間值
+$mid=(($odd+1)/2)-1;
 
+
+for($i=0;$i<$stars;$i++){
+
+    if($i<=$mid){
+        $tmp=$i;
+    }else{
+       // $tmp--;
+        $tmp=$tmp-1;
+    }
+
+    for($k=0;$k<$mid-$tmp;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$tmp*2+1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+}
+
+/* for($i=$stars-1;$i>0;$i--){
+    for($k=0;$k<$stars-$i;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$i*2-1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+} */
 
 
 
