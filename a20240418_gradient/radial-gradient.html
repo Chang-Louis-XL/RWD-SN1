@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+       #div1{
+        width: 300px;
+        height: 300px;
+        /* 放色漸層，無角度，預設為中心點 */
+        background-image: radial-gradient(red,orange);
+       }
+       #div2{
+        width: 300px;
+        height: 300px;
+        background-image: radial-gradient(red 90%,orange);
+       }
+       #div3{
+        width: 300px;
+        height: 300px;
+        background-image: radial-gradient(red 50%,orange 50%);
+       }
+       #div4{
+        width: 300px;
+        height: 300px;
+        /* radial-gradient(形狀 尺寸 at 位置，顏色...) 
+        circle 尺寸:一個參數當半徑
+        ellipse 尺寸: 兩個參數代表寬高
+        */
+        background-image: radial-gradient(ellipse 100px 50px at 30px,red ,pink);
+       }
+       #div5{
+        width: 500px;
+        height: 300px;
+        /* at 寬:450px 高:50px
+        closest-coner 圓心最近的角
+        closest-side 圓心最近的邊
+        farthest-corner 圓心最遠的角
+        farthest-side 圓心最遠的邊 
+        */
+        /* background-image: radial-gradient(circle 50px at 450px 50px ,red 50%,orange 50%); */
+        background-image: radial-gradient(circle farthest-corner at 50px 50px  ,red ,orange );
+       }
+       #div6{
+        width: 500px;
+        height: 300px;
+        /* 重覆漸變若只加一處，只能加到最後面，若都加一定前面的值也要加 */
+        background-image:repeating-radial-gradient(red ,black 40px);
+       }
+</style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+</body>
+</html>

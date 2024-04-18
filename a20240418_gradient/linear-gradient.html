@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #div1{
+        width: 300px;
+        height: 300px;
+        /* 
+        漸層一定要兩個以上的顏色
+        角度跟位置顏色一定要放在第一個
+        45deg = 顏色角度45度角 
+        to top = 0deg/360deg
+        to right  = 90deg
+        to bottom = 180deg
+        to left = 270deg
+        括弧不得空格
+         */
+        background-image: linear-gradient(45deg,red,orange);
+    }
+
+    #div2{
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(to left,red,orange);
+    }
+    #div3{
+        width: 300px;
+        height: 300px;
+        /* 可以使用 % 或 px */
+        background-image: linear-gradient(red 60%,yellow,orange 200px);
+    }
+    #div4{
+        width: 300px;
+        height: 300px;
+        /*如果漸變位置相同，會有明顯的分隔線 */
+        /* background-image: linear-gradient(red 50%,orange 50%); */
+        /* https://cssgradient.io/  漸層顏色工具 */
+        /* 計算方式;紫色0~10%,粉色10~90%,紫色90~100% */
+        background-image: linear-gradient(45deg,
+        purple 10%,pink 10%,pink 90%, purple 90%);
+    }
+    #div5{
+        width: 300px;
+        height: 300px;
+        /* 重複漸層。如果漸層不夠大會重複填滿區域 */
+        background-image: repeating-linear-gradient(red,orange 10%);
+    }
+    #div6{
+        width: 300px;
+        height: 300px;
+        /* 計算區塊:黑色0~20，橘色20~40，未填滿部分繼續重複 */
+        background-image: repeating-linear-gradient(45deg, black 0px, black 20px, orange 20px , orange 40px);
+    }
+</style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+</body>
+</html>
