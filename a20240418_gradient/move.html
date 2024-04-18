@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1 {
+        width: 300px;
+        height: 300px;
+        background: gray;
+        /* transition: 樣式1 時間 速度 延遲 ， 樣式2 時間 速度 延遲 
+        all代表全部樣式
+        backgroud 2s 增加轉場時間
+    */
+        transition: width 1s, background 2s;
+    }
+
+    #div1:hover {
+        width: 500px;
+        background: red;
+    }
+
+    #container {
+        width: 1000px;
+        height: 600px;
+        border: 1px solid black;
+        position: relative;
+    }
+
+    /* 選擇器: container div 代表container裡面所有div */
+    #container div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: red;
+        left: 0px;
+    }
+
+    /* hover指滑鼠移到此位置的時候，裡面div的動作 */
+    #container:hover div {
+        /* 移動的位置，100%即到格外，所以-100 */
+        left: calc(100% - 100px);
+    }
+
+    #ease {
+        /* transition: 移動的功能 */
+        transition: left 5s ease;
+    }
+
+    #linear {
+        top: 100px;
+        transition: left 5s linear;
+    }
+
+    #ease-in {
+        top: 200px;
+        transition: left 5s ease-in;
+    }
+
+    #ease-out {
+        top: 300px;
+        transition: left 5s ease-out;
+    }
+
+    #ease-in-out {
+        top: 400px;
+        transition: left 5s ease-in-out;
+    }
+    #cubic-bezier{
+        top: 500px;
+        transition: left 5s cubic-bezier(0,1.73,1,-1.45);
+    }
+
+    #hello::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: black;
+    }
+    /* 偉元素after意思指物件的之後功能物件"底線" */
+.nav::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 5px;
+    background: black;
+    /* ease 延遲一秒才出現 */
+    transition: width .5s ease 1s;
+    /* 從中間往外延伸 */
+    margin: auto;
+}
+.nav:hover::after {
+    width: 100%;
+}
+h1{
+    display: inline-block;
+}
+</style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="container">
+        <div id="ease">EASE</div>
+        <div id="linear">linear</div>
+        <div id="ease-in">ease-in</div>
+        <div id="ease-out">ease-out</div>
+        <div id="ease-in-out">ease-in-out</div>
+        <div id="cubic-bezier">cubic-bezier</div>
+    </div>
+    <H1 class="nav">首頁</H1>
+    <H1 class="nav">關於</H1>
+</body>
+
+</html>
