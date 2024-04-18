@@ -83,13 +83,15 @@
     }
     /* 偉元素after意思指物件的之後功能物件"底線" */
 .nav::after {
+    /* content: 偉元素內容 ，一定要有*/
     content: "";
     display: block;
     width: 0%;
     height: 5px;
     background: black;
     /* ease 延遲一秒才出現 */
-    transition: width .5s ease 1s;
+    /* transition: width .5s ease 1s; */
+    transition: width .5s;
     /* 從中間往外延伸 */
     margin: auto;
 }
