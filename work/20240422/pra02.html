@@ -22,23 +22,30 @@
         }
 
         .card {
+            position: relative;
             width: 100%;
             height: 50vh;
             /* background-color: blueviolet; */
             padding: 20px
-            
         }
 
         .card-image {
+            margin: auto;
             width: 55%;
             height: 30vH;
-            margin: auto;
-            /* background-color: antiquewhite; */
+
         }
 
         .card-image>img {
             width: 100%;
             height: 100%;
+            border: 1px solid #ccc;
+        }
+
+        .card-image>img:hover {
+            width: 102%;
+            height: 102%;
+            transform: 0.5s;
         }
 
         .card-text {
@@ -49,6 +56,25 @@
             margin-top: 20px;
             font-family: Arial, sans-serif;
         }
+
+        .card-image>.card-logo {
+            position: absolute;
+            top: 15%;
+            border: 0;
+            width: 50px;
+            height: 50px;
+            left: calc(100% - 35%);
+        }
+
+        .card-image>.card-logo:hover {
+            width: 60px;
+            height: 60px;
+            transition: 0.5;
+        }
+        .card-image> .card-link{
+            width: 100%;
+            height:100%;
+        }
     </style>
 </head>
 
@@ -58,11 +84,15 @@
             <div class="content">
                 <div class="card">
                     <div class="card-image">
-                        <img src="./images/apple06.png" alt="">
+                        <a href="https://www.youtube.com/watch?v=zOEzE_dj5g8" class="card-link">
+                        <img src="./images/apple06.png" alt=""></a>
+                        <img src="./images/logo.png" alt="" class="card-logo">
                     </div>
                     <div class="card-text">
                         <h4>通緝-猥褻罪</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem exercitationem, molestiae maiores voluptatibus, pariatur alias deserunt vitae voluptatem veniam nulla ex illo recusandae tempora minus aperiam officiis blanditiis sunt!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem exercitationem,
+                            molestiae maiores voluptatibus, pariatur alias deserunt vitae voluptatem veniam nulla ex
+                            illo recusandae tempora minus aperiam officiis blanditiis sunt!</p>
                     </div>
                 </div>
             </div>

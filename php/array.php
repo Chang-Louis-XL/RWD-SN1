@@ -21,6 +21,7 @@
 
     echo "<hr>";
 
+    //儲存在硬碟中，必須要換成字串，否則陣列僅能存為記憶體中。
     echo serialize($a);
     echo "<hr>";
     echo serialize($b);
@@ -36,6 +37,7 @@
     echo $tmp;
 
     echo "<hr>";
+    //explode，自動用逗號分配字串
     $b = explode(",", $tmp);
     print_r($b);
     ?>
@@ -63,10 +65,10 @@
     }
 
     // "<pre>"請把標籤中的內容依原狀況呈現(如原始碼)
-// echo "<pre>";
-// print_r($table9x9);
-// echo "</pre>";
-    
+    // echo "<pre>";
+    // print_r($table9x9);
+    // echo "</pre>";
+
     $i = 1;
     // foreach把$ninenine陣列裡面的每一個值取出至$nine。 
     foreach ($ninenine as $nine) {
@@ -78,17 +80,6 @@
     }
     echo "<hr>";
 
-
-    echo "<table>";
-    $i = 1;
-    foreach ($ninenine as $nine) {
-        echo $nine;
-        if ($i % 9 == 0) {
-            echo "<br>";
-        }
-        $i++;
-    }
-    echo "<hr>";
     ?>
     <style>
         table {
@@ -107,6 +98,7 @@
 
         if ($idx % 9 == 0) {
             echo "<tr>";
+            // 因印出為$idx屬於KEY值，所以第一個數為0的餘數仍是0。
         }
 
         echo "<td> $nine </td>";
@@ -114,7 +106,6 @@
         if (($idx + 1) % 9 == 0) {
             echo "</tr>";
         }
-
     }
     echo "</table>";
     echo "陣列中有" . count($ninenine) . "個元素";
@@ -134,56 +125,57 @@
     // 4.陣列存放數字，並存放不重複的數字
     // 5.並與先前陣列內容作比較
 
-$lotto=[];
-while(count($lotto)<6){
-$tem = rand(1,38);
-// 如果沒在陣列裡，就加入陣列
-if (!in_array($tem, $lotto)) {
-    $lotto[] = $tem;
-}
-}
-echo join(",",$lotto);
-echo "<hr>" ;
-?>
-
-<h2>找出五百年內的閏年</h2>
-
-<ul>
-    <li>請依照閏年公式找出五百年內的閏年</li>
-    <li>使用陣列來儲存閏年</li>
-    <li>使用迴圈來印出閏年</li>
-</ul>
-<?php
-$leaps=[];
-$year=2024;
-for($i=$year;$i<($year+500);$i++){
-    if($i%4 == 0 && $i%100!=0 || $i%400==0){
-        $leaps[]=$i;
+    $lotto = [];
+    //count計算key的總和
+    while (count($lotto) < 6) {
+        $tem = rand(1, 38);
+        // 如果沒在陣列裡，就加入陣列
+        if (!in_array($tem, $lotto)) {
+            $lotto[] = $tem;
+        }
     }
-}
+    echo join(",", $lotto);
+    echo "<hr>";
+    ?>
 
-echo "<h3>自$year 至".($year+500)."止，有以下閏年：</h3>";
-foreach($leaps as $leap){
-    echo $leap;
-    echo "<br>";
-}
-echo "<hr>";
-echo "共有".count($leaps)."個閏年"
-?>
+    <h2>找出五百年內的閏年</h2>
 
-<?php
-$sky=[ 4=>'甲', 5=>'乙', 6=>'丙', 7=>'丁', 8=>'戊', 9=>'己', 0=>'庚', 1=>'辛', 2=>'壬', 3=>'癸' ];
-$land=[ 4=>'子', 5=>'丑', 6=>'寅', 7=>'卯', 8=>'辰', 9=>'巳', 10=>'午', 11=>'未', 0=>'申', 1=>'酉', 2=>'戌', 3=>'亥' ];
-$year=1958;
+    <ul>
+        <li>請依照閏年公式找出五百年內的閏年</li>
+        <li>使用陣列來儲存閏年</li>
+        <li>使用迴圈來印出閏年</li>
+    </ul>
+    <?php
+    $leaps = [];
+    $year = 2024;
+    for ($i = $year; $i < ($year + 500); $i++) {
+        if ($i % 4 == 0 && $i % 100 != 0 || $i % 400 == 0) {
+            $leaps[] = $i;
+        }
+    }
 
-echo "西元年".$year;
+    echo "<h3>自$year 至" . ($year + 500) . "止，有以下閏年：</h3>";
+    foreach ($leaps as $leap) {
+        echo $leap;
+        echo "<br>";
+    }
+    echo "<hr>";
+    echo "共有" . count($leaps) . "個閏年"
+    ?>
 
-$t1=$sky[$year%10];
-$t2=$land[$year%12];
+    <?php
+    $sky = [4 => '甲', 5 => '乙', 6 => '丙', 7 => '丁', 8 => '戊', 9 => '己', 0 => '庚', 1 => '辛', 2 => '壬', 3 => '癸'];
+    $land = [4 => '子', 5 => '丑', 6 => '寅', 7 => '卯', 8 => '辰', 9 => '巳', 10 => '午', 11 => '未', 0 => '申', 1 => '酉', 2 => '戌', 3 => '亥'];
+    $year = 1958;
 
-echo "為$t1$t2 年";
+    echo "西元年" . $year;
 
-?>
+    $t1 = $sky[$year % 10];
+    $t2 = $land[$year % 12];
+
+    echo "為$t1$t2 年";
+
+    ?>
 
     <p>&nbsp;</p>
     <p>&nbsp;</p>

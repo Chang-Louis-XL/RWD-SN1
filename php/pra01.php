@@ -99,29 +99,48 @@ echo $year ."是潤年";
 ?>
 
  <h2>使用for迴圈來產生以下的數列</h2>
- <?php
-for($i=1 ; $i<100 ; $i=$i+2){
+
+
+<h2>簡單迴圈練習</h2>
+<ul>
+    <li>1,3,5,7,9……n</li>
+    <li>10,20,30,40,50,60……n</li>
+    <li>3,5,7,11,13,17……97</li>
+</ul>
+
+<?php
+$n=100;
+for($i=1;$i<$n;$i=$i+2){
     echo $i;
     echo ",";
 }
-
-for($i=3 ; $i<100 ; $i++){
-    //$i = 3
-    //$i = 4
-    for($j=2 ; $j < $i; $j++){
-        //$j = 2
-        $i % $j
-        
-        //$j = 3
-        $i % $j
-
-        //$j = 4
-        
-        //$j < $i => 3<3 
-    }
+echo "<hr>";
+$n=25;
+for($i=1;$i<$n;$i++){
+    echo $i*10;
+    echo ",";
 }
 
 
+echo "<hr>";
+$count=0;
+
+for($i=3;$i<100;$i++){
+    $check=true;
+    for($j=2;$j<=sqrt($i);$j++){
+         if($i%$j==0){
+            $check=false;
+         }
+         $count++;
+    }
+    
+    if($check==true){
+        echo $i.",";
+    }
+    $count++;
+}
+
+echo "迴圈次數:".$count;
 
 
 ?>
