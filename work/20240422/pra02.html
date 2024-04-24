@@ -12,7 +12,6 @@
 
         .row {
             clear: both;
-            width: 100%;
         }
 
         .content {
@@ -32,17 +31,23 @@
         .card-image {
             margin: auto;
             width: 55%;
-            height: 30vH;
+            height: 15vH;
+            background-color: aqua;
 
         }
 
         .card-image>img {
             width: 100%;
-            height: 100%;
+            
             border: 1px solid #ccc;
         }
 
-        .card-image>img:hover {
+
+        a {
+            display: inline-block;
+        }
+
+        .a>img:hover {
             width: 102%;
             height: 102%;
             transform: 0.5s;
@@ -55,15 +60,17 @@
             margin: auto;
             margin-top: 20px;
             font-family: Arial, sans-serif;
+            background-color: antiquewhite;
         }
 
         .card-image>.card-logo {
             position: absolute;
             top: 15%;
-            border: 0;
+            right: 28%;
             width: 50px;
             height: 50px;
-            left: calc(100% - 35%);
+            
+            background-size: cover;
         }
 
         .card-image>.card-logo:hover {
@@ -71,10 +78,7 @@
             height: 60px;
             transition: 0.5;
         }
-        .card-image> .card-link{
-            width: 100%;
-            height:100%;
-        }
+
     </style>
 </head>
 
@@ -84,15 +88,16 @@
             <div class="content">
                 <div class="card">
                     <div class="card-image">
-                        <a href="https://www.youtube.com/watch?v=zOEzE_dj5g8" class="card-link">
-                        <img src="./images/apple06.png" alt=""></a>
+                        <a href="https://www.youtube.com/watch?v=zOEzE_dj5g8"  alt="">
+                            <img src="./images/apple06.png" alt="">
+                        </a>
                         <img src="./images/logo.png" alt="" class="card-logo">
                     </div>
                     <div class="card-text">
-                        <h4>通緝-猥褻罪</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem exercitationem,
+                        <h4>lorem</h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem exercitationem,
                             molestiae maiores voluptatibus, pariatur alias deserunt vitae voluptatem veniam nulla ex
-                            illo recusandae tempora minus aperiam officiis blanditiis sunt!</p>
+                            illo recusandae tempora minus aperiam officiis blanditiis sunt!
                     </div>
                 </div>
             </div>
