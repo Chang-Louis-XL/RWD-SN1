@@ -130,15 +130,14 @@ for($i=0 ; $i<10 ; $i++){
 }
 echo "<br>";
 
-<h>若指定值為0或空值，比較後狀況為False</h2>
-$a=0;
+// 若指定值為0或空值，比較後狀況為False
+//if中只放變數的應用
+$a=true;
 if($a){
-echo "O";
+    echo "TRUE";
 }else{
-echo "X";
+    echo "FALSE";
 }
-
-
 ?>
 
 </body>
