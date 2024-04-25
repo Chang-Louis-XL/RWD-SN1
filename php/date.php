@@ -69,9 +69,11 @@ $week=[
     7=>'星期日',
 ];
 for($i=0;$i<5;$i++){
+    //strtotime將時間畫分為秒
+    //("+$i week",strtotime($date)逗號後面接要判斷的時間
     $day=strtotime("+$i week",strtotime($date));
-    date("N");
     echo date("Y-m-d ",$day);
+    // date("N"); 抓出現在的日期。
     echo $week[date("N",$day)];
     echo "<br>";
 }
