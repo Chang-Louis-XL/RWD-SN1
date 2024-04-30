@@ -62,6 +62,12 @@
     echo "</table>";
 
 
+
+
+for($i=0; $i<42;$i++){
+    echo
+}
+
     ?>
 
 </body>
