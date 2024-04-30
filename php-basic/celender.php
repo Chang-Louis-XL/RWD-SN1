@@ -323,7 +323,8 @@ $today=date("Y-m-d");
 $days=[];
 for($i=0;$i<42;$i++){
     // ("+$i days",strtotime($today)) 第i天，轉換為秒數，由date轉換為日期格式
-    $days[]=date("d",strtotime("+$i days",strtotime($today)));
+    //假如today是9/3，i也是3了話，印出來為6號
+    $days[]=date("d",strtotime("$i days",strtotime($today)));
 }
 /* echo "<pre>";
 print_r($days);
@@ -380,9 +381,89 @@ foreach($days as $day){
 }
 echo "</div>";
 
-
 ?>
 
+
+</table>
+<style>
+.block-table{
+    width:380px;
+    display:flex;
+    flex-wrap:wrap;
+}
+.item{
+    margin-left:-1px;
+    margin-top:-1px;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border:1px solid lightgreen;
+    position:relative;
+    transition: all 0.3s;
+    background:white;
+}
+.item-header{
+    margin-left:-1px;
+    margin-top:-1px;
+    display:inline-block;
+    width:50px;
+    height:25px;
+    border:1px solid lightgreen;
+    text-align: center;
+    background-color: darkgreen; 
+    color:lightgreen
+}
+.item:hover{
+    background:yellow;
+    transform: scale(1.3);
+    font-weight:bold;
+    color:blue;
+    transition: all 0.3s;
+    z-index:10;
+
+}
+
+.holiday{
+    background:pink;
+}
+
+
+
+</style>
+<?php 
+
+$days=[];
+for($i=0;$i<42;$i++){
+    $diff=$i-$firstWeekStartDay;
+    $days[]=date("Y-m-d",strtotime("$diff days",$firstDay));
+}
+/* echo "<pre>";
+print_r($days);
+echo "</pre>"; */
+echo "<div class='block-table'>";
+echo "<div class='item-header'>日</div>";
+echo "<div class='item-header'>一</div>";
+echo "<div class='item-header'>二</div>";
+echo "<div class='item-header'>三</div>";
+echo "<div class='item-header'>四</div>";
+echo "<div class='item-header'>五</div>";
+echo "<div class='item-header'>六</div>";
+foreach($days as $day){
+    $format=explode("-",$day)[2];
+    $w=date("w",strtotime($day));
+    if($w==0 || $w==6){
+
+        echo "<div class='item holiday'>$format</div>";
+    }else{
+
+        echo "<div class='item'>";
+        echo "<div class='date'>$format</div>";
+        echo "</div>";
+    }
+}
+echo "</div>";
+
+?>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
