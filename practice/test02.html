@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>clear 属性示例</title>
+    <style>
+        /* 浮动的元素 */
+        .float-box {
+            float: left;
+            width: 50%;
+            height: 100px;
+            background-color: lightgray;
+        }
+
+        /* 使用 clear 属性的元素 */
+        .clear-box {
+            clear: both; /* 清除左右两侧浮动 */
+            width: 100%;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="float-box">浮动元素</div>
+    <div class="float-box">浮动元素</div>
+    <div class="clear-box">红色盒子</div>
+</body>
+</html>
