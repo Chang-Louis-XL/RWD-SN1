@@ -59,14 +59,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
 }
-
 .aside-header>.aside-title {
     font-weight: 500;
     font-size: 24px;
     font-family: '標楷體';
-    color: #FF00FF;
+    color:#FF00FF;
     text-align: center;
     margin-top: 10px;
     padding-top: 8px;
@@ -80,20 +78,21 @@
 .aside-header>.box {
     width: 200px;
     height: 35px;
-    background-image: url(../images/menu1.png);
+    /* background-color: aquamarine; */
+    background-image: url('../images/menu1.png');
 
     font-size: 16px;
     font-family: '標楷體';
-    color: black;
+    color:#000000;
     text-align: center;
     margin-top: 10px;
     padding-top: 8px;
-}
 
+}
 .aside-header>.box:hover {
-    background-image: url(../images/menu2.png);
-}
+    background-image: url('../images/menu2.png');
 
+}
 
 .aside-footer {
     width: 215px;
@@ -108,7 +107,6 @@
     text-align: center;
     font-size: 16px;
 }
-
 
 
 /* main */
