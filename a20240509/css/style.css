@@ -1,0 +1,26 @@
+*{
+    box-sizing:border-box;
+    overflow: hidden;
+}
+
+.header {
+    width: 1024px;
+    height: 65px;
+    background-color: lightblue;
+    margin: auto;
+}
+
+.container {
+    width: 1024px;
+    /* -號要空格，否則會變成負向數值 */
+    height: calc(768px - 65px - 25px);
+    background-color: lightgray;
+    margin: auto;
+}
+
+.footer {
+    width: 1024px;
+    height: 25px;
+    background-color: lightgreen;
+    margin: auto;
+}
