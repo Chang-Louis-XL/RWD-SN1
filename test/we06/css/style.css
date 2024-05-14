@@ -55,7 +55,9 @@
 }
 
 .aside-header>.box {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .marquee {
