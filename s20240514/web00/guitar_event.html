@@ -7,75 +7,103 @@
     <title>Document</title>
     <style>
         body {
-            background-image: url(./images/0101.jpg)
+            background-image: url('./images/0101.jpg');
+        }
+
+        .container-main {
+            text-align: center;
+        }
+
+        .container-main>p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: #0000FF;
+            font-style: italic;
+            font-family: '標楷體';
         }
 
         .my-title {
-            font-size: 18px;
-            font-family: '標楷體';
             text-align: center;
+            font-size: 18px;
             color: #FF0000;
+            font-family: '標楷體';
         }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
+        /* nav */
+        .nav {
             margin-top: 20px;
             margin-bottom: 10px;
+            /* margin: 20px 0; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
         }
 
-        .container {
+
+        .container-content>p {
+            text-align: start;
+            color: #FF0000;
+            font-family: '標楷體';
+            font-size: 16px;
+        }
+
+        .container-content {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
 
+            text-align: start;
+            color: #FF0000;
             font-family: '標楷體';
             font-size: 16px;
-
         }
 
-        .container>.date-title {
+        .container-content>.date-title {
             flex-basis: 100%;
-            color: #800000;
         }
 
-        .container>.my-date {
+        .container-content>.my-date {
             flex-basis: 70%;
             margin-top: 10px;
         }
 
-        .container>.my-p {
+        .container-content>.my-p {
             flex-basis: 30%;
         }
 
-        #d1 {
+        .date-title {
+            color: #800000;
+        }
+
+        #day1 {
             color: #0000FF;
         }
 
-        #d2 {
+        #day2 {
             color: #FF0000;
         }
 
-
-        #d3 {
+        #day3 {
             color: #00FF00;
         }
 
-        #d4 {
+        #day4 {
             color: #000000;
-
         }
     </style>
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div class="my-title">
             吉他社近期活動公告
-        </div>
     </header>
+
+    <!-- nav -->
     <nav class="nav">
         <div>
             <a href="./index.html" target="_top">
@@ -93,34 +121,35 @@
             </a>
         </div>
     </nav>
-    <nav>
-        <div>
-            <a href="d1">
-                九月十六日
-            </a>
-        </div>
-        <div>
-            <a href="d2">
-                十月三十一日
-            </a>
-        </div>
-        <div>
-            <a href="d3">
-                十二月二十五日
-            </a>
-        </div>
-        <div>
-            <a href="d4">
-                元月一日
-            </a>
-        </div>
-    </nav>
 
-    <div class="container">
+    <!-- nav -->
+    <div class="nav">
+        <div>
+            <a href="#day1">九月十六日</a>
+
+        </div>
+        <div>
+            <a href="#day2">十月三十一日</a>
+
+        </div>
+        <div>
+            <a href="#day3">十二月二十五日</a>
+
+        </div>
+        <div>
+            <a href="#day4">元月一日</a>
+
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="container-content">
         <div class="date-title">
             近期活動
         </div>
-        <div class="my-date" id="d1">
+
+        <!-- day1 -->
+        <div class="my-date" id="day1">
             日期：九月十六日<br>
             活動主題：社員大會<br>
             地點：吉他社教室<br>
@@ -130,12 +159,13 @@
             2.指導老師致詞<br>
             3.社長致詞<br>
             4.社規介紹以及教學內容之簡介<br>
-            
         </div>
         <div class="my-p">
-            <a href="#">top</a>
+            <a href="#">TOP</a>
         </div>
-        <div class="my-date" id="d2">
+
+        <!-- day2 -->
+        <div class="my-date" id="day2">
             日期：十月三十一日<br>
             活動主題：校內吉他表演<br>
             地點：學校大禮堂<br>
@@ -145,12 +175,13 @@
             2.微風往事<br>
             3.七月涼山<br>
             4.明天會更好(大合唱)<br>
-
         </div>
         <div class="my-p">
-            <a href="#">top</a>
+            <a href="#">TOP</a>
         </div>
-        <div class="my-date" id="d3">
+
+        <!-- day3 -->
+        <div class="my-date" id="day3">
             日期：十二月二十五日<br>
             活動主題：校內吉他比賽<br>
             地點：學校大禮堂<br>
@@ -161,9 +192,11 @@
             3.參賽者必須自備樂器<br>
         </div>
         <div class="my-p">
-            <a href="#">top</a>
+            <a href="#">TOP</a>
         </div>
-        <div class="my-date" id="d4">
+
+        <!-- day4 -->
+        <div class="my-date" id="day4">
             日期：元月一日<br>
             活動主題：全國吉他(高中組)演奏比賽<br>
             地點：台北市社教館<br>
@@ -174,10 +207,17 @@
             3.參賽規則請參考比賽細則<br>
         </div>
         <div class="my-p">
-            <a href="#">top</a>
+            <a href="#">TOP</a>
         </div>
-    </div>
 
+
+
+
+
+
+
+
+    </div>
 </body>
 
 </html>
