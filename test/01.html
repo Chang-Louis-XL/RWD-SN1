@@ -1,0 +1,24 @@
+body>
+    <div class="size">
+        <p class="content"></p>
+    </div>
+    <button class="mybtn" data-text="BLACK" data-color="red" data-bg="black">123</button>
+    <button class="mybtn" data-text="BLUE" data-color="yellow" data-bg="blue">456</button>
+    <button class="mybtn" data-text="RED" data-color="lightblue" data-bg="red">789</button>
+</body>
+<script>
+    $(document).ready(function () {
+        const baa = $('.mybtn');
+        const show = $(".content");
+        baa.click(function () {
+            let nowbtn = $(this);
+            let bg = nowbtn.attr("data-bg");
+            let text = nowbtn.attr("data-text");
+            let color = nowbtn.attr("data-color");
+            show.text(text);
+            show.css({
+                "background-color": bg,
+                "color": color
+            })
+        })
+        </script>
