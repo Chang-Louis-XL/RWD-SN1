@@ -83,11 +83,11 @@
         <h1>color change</h1>
     </header>
     <div class="container">
-        <button type="button" id="blackBtn" class="myBtn" imageNameid="pic01.jpg" data-color="black"
+        <button type="button" id="blackBtn" class="myBtn" imageNameid="pic01.jpg" imglocal="22" data-color="black"
             data-text="BLACK BTN" imglocal="">blackBtn</button>
-        <button type="button" id="blueBtn" class="myBtn" imageNameid="pic02.jpg" data-color="blur"
+        <button type="button" id="blueBtn" class="myBtn" imageNameid="pic02.jpg" imglocal="23" data-color="blur"
             data-text="blur BTN"  imglocal="">blueBtn</button>
-        <button type="button" id="redBtn" class="myBtn" imageNameid="pic03.jpg" data-color="red"
+        <button type="button" id="redBtn" class="myBtn" imageNameid="pic03.jpg" imglocal="25" data-color="red"
             data-text="red BTN"  imglocal="">redBtn</button>
     </div>
 
@@ -106,7 +106,7 @@
             </tr>
             <tr>
                 <td>
-                    <img id="myimg" src="" alt="">
+                    <img id="myimg" src="https://picsum.photos/id/22/800/600" alt="">
                 </td>
             </tr>
         </table>
@@ -128,32 +128,23 @@
             const myBtn = $('.myBtn');
             const myimg = $('#myimg')
 
-
-            // 原生js
-            // const blueBtnJs = document.getElementById('blueBtn');
-            // console.log('blueBtnJs', blueBtnJs);
-
-
-            // 2.action / method 
             myBtn.click(function () {
-                // console.log('blackBtn ok');
-                // resultSpan.text('BLACK');
-                // resultSpan.css('color', 'black');
-                console.log('this', this);
-                console.log('$(this)', $(this));
+
                 let nowBtn = $(this);
                 let getDataColor = nowBtn.attr('data-color');
                 let getDataText = nowBtn.attr('data-text');
                 let getimageName = nowBtn.attr('imageNameid');
-                let imgUrl = `./images/${getimageName}`;
+                let getimglocal = nowBtn.attr('imglocal');
+                // let imgUrl = `./images/${getimageName}`;
+                let imgurl=`https://picsum.photos/id/${getimglocal}/800/600`;
 
-                console.log('getDataColor', getDataColor);
-                console.log('getDataText', getDataText);
+
 
                 resultSpan.css('color', getDataColor);
                 resultSpan.text(getDataText);
                 imageName.text(getimageName);
-                myimg.attr('src', imgUrl);
+                myimg.attr('src', imgurl);
+
                 
 
 

@@ -1,10 +1,11 @@
 <?php
+
 function dd($data)
 {
     echo "<pre>";
     print_r($data);
     echo "</pre>";
-};
+}
 
 $data = [
     [
@@ -27,9 +28,9 @@ $data = [
     ]
 ];
 
-// dd($data);
-?>
+echo dd($data);
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +38,6 @@ $data = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- css -->
     <style>
@@ -69,49 +69,42 @@ $data = [
             <th width="8%">ID</th>
             <th width="15%">NAME</th>
             <th width="15%">PHOTO</th>
-            <th>PRICE</th>
+            <th width="">PRICE</th>
         </tr>
-        <?php foreach ($data as $key => $value) : ?>
-            <tr>
-                <td>
-                    <?= $value['id']; ?>
-                </td>
-                <td>
-                    <?= $value['name']; ?>
-                </td>
-                <td>
-                    <?php
-                    $tmpUrl = "./images/{$value['pic']}";
-                    ?>
-                    <img src="<?= $tmpUrl; ?>" alt="" srcset="">
-                </td>
-                <td>
-                    <?= $value['price']; ?>
-                </td>
-            </tr>
+        <?php foreach ($data as $key => $value):?>
+        <tr>
+            <td>
+                <?= $value['id'] ?>
+            </td>
+            <td>
+                <?= $value['name'] ?>
+            </td>
+            <td>
+                <img src="./images/<?= $value['pic'] ?>" alt="">
+            </td>
+            <td>
+                <?= $value['price'] ?>
+            </td>
+        </tr>
         <?php endforeach; ?>
-
-
     </table>
-
-    <!-- js or jqery -->
     <script>
-        // 方法一
-        $(document).ready(function() {
+        方法一
+        $(document).ready(function () {
 
-            let ajaxUrl = "./getData.php";
+            let ajaxUrl = "./JQ_table.php";
             $.ajax({
                 type: "post",
                 url: ajaxUrl,
                 // data: "data",
                 dataType: "json",
-                success: function(res) {
+                success: function (res) {
                     console.log('res', res);
                 }
             });
-            
+
         });
-        // jquery end
+        jquery end
     </script>
 </body>
 
