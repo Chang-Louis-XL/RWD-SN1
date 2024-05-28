@@ -28,7 +28,7 @@ $data = [
 
 $myStr = "text 123";
 // $myStr = "text $data 123";
-echo "text $data[0]['name'] 123";
+echo "text {$data[0]['name']} 123";
 
 ?>
 
