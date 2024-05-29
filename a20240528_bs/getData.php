@@ -6,7 +6,7 @@ function dd($data)
     echo "</pre>";
 }
 
-$data = [
+$a = [
     [
         'id' => 1,
         'name' => 'amy',
@@ -24,5 +24,5 @@ $data = [
     ],
 ];
 
-// dd($data);
-echo json_encode($data);
+dd($a);
+echo json_encode($a);
