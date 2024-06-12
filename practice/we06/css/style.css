@@ -4,7 +4,7 @@
 }
 
 .header{
-    width: 1024px;
+    width: 1000px;
     height: 65px;
     border: solid 1px black;
     margin: auto;
@@ -12,7 +12,7 @@
 }
 
 .container{
-    width: 1024px;
+    width: 1000px;
     height: calc(768px - 65px - 20px);
     border: solid 1px black;
     margin: auto;
@@ -21,8 +21,21 @@
 }
 
 .aside {
-    width: 1000px;
-    height: calc(768px - 65px - 20px - 29px);
-    
+    width: 215px;
+    height: calc(768px - 65px - 20px);
+    border: solid 1px black;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.aside-title {
+
+}
+
+.main {
+width: calc(1000px - 215px );
+height: calc(768px - 65px - 20px);
+background-color: antiquewhite;
 }
