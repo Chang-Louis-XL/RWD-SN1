@@ -1,127 +1,28 @@
-* {
+*{
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.header {
-    width: 1000px;
+.header{
+    width: 1024px;
     height: 65px;
-    border: 1px solid black;
+    border: solid 1px black;
     margin: auto;
     padding: 2px;
-    border-bottom: 0px;
 }
 
-.header>a>img {
-    width: 994px;
-    height: 60px;
+.container{
+    width: 1024px;
+    height: calc(768px - 65px - 20px);
+    border: solid 1px black;
     margin: auto;
-    display: block;
-}
-
-.container {
     display: flex;
     flex-direction: row;
-    width: 1000px;
-    height: calc(768px - 65px - 20px);
-    /* background-color: rgb(9, 97, 175); */
-    margin: auto;
 }
 
 .aside {
-    width: 215px;
-    height: calc(768px - 65px - 20px);
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: column;
-}
-
-.aside-header {
-    flex-basis: calc(100% - 25px);
-    border: 1px solid black;
-    /* background-color: blanchedalmond; */
-    border-right: 0px;
-    border-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aside-header>.aside-title{
-font-family: '標楷體';
-font-weight: 500;
-font-size: 24px;
-color:#FF00FF;
-margin-top: 10px;
-border-bottom: 1px solid black;
-}
-
-.aside-header>.box {
-    width: 200px;
-    height: 35px;
-    font-family: '標楷體';
-    font-size: 16px;
-    text-align: center;
-    background-image: url(../images/menu1.png);
-    margin-top: 10px;
-    padding-top: 8px;
-}
-
-.aside-header>.box:hover {
-    background-image: url(../images/menu2.png);
-}
-
-
-.aside-footer {
-    /* width: 215px; */
-    flex-basis: 25px;
-    border: 1px solid black;
-    /* background-color: rgb(187, 108, 5); */
-    border-right: 0px;
-
-    font-family: '標楷體';
-    text-align: center;
-    font-size: 16px;
-}
-
-.main {
-    width: calc(1000px - 215px);
-    height: calc(768px - 65px - 20px);
-    /* background-color: rgb(223, 16, 16); */
-}
-
-.main-header {
-    height: 29px;
-    border: 1px solid black;
-    /* background-color: blueviolet; */
-}
-
-.main-header >.marquee {
-    width: 770px;
-    height: 29px;
-    font-weight: '標楷體';
-    color: #0000FF;
-    font-size: 24px;
-}
-
-.main-section {
-    height: calc(100% - 29px);
-    /* background-color: aqua; */
-    border: 1px solid black;
-    border-top: 0px;
-    /* background-color: #FF00FF; */
-}
-
-.main-section>iframe {
-    width: 100%;
-    height: 100%;
-}
-
-
-.footer {
     width: 1000px;
-    height: 20px;
-    border: 1px solid black;
-    margin: auto;
-    border-top: 0px;
+    height: calc(768px - 65px - 20px - 29px);
+    
+
 }
