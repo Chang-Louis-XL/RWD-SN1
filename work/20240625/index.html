@@ -31,14 +31,18 @@
             align-items: center;
         }
 
-        .btn-start{
+        .btn-start {
             margin-bottom: 70px;
         }
 
         .page-h {
             height: 95vh;
             padding-top: 10vh;
+        }
 
+        .row-h {
+            padding-top: 10vh;
+            height: 75vh;
         }
 
         .img-a {
@@ -48,6 +52,11 @@
         .text-a {
             height: 500px;
             padding-top: 30px !important;
+        }
+
+        iframe {
+            width: 95%;
+            height: 95%;
         }
     </style>
 </head>
@@ -91,25 +100,25 @@
             <h1 class="display-4">Hi I'm Louis.</h1>
             <p class="lead text-white">Life tastes like seafood.You make choices and you don’t look back.</p>
         </div>
-        <div class="btn position-absolute bottom-0 start-50 translate-middle-x btn-start " role="group" aria-label="Basic example">    
+        <div class="btn position-absolute bottom-0 start-50 translate-middle-x btn-start " role="group"
+            aria-label="Basic example">
             <button type="button" class="btn btn-primary" onclick="location.href='#about'">Get Start</button>
-          </div>
+        </div>
     </div>
     <!-- nav end -->
 
     <!-- about -->
     <div class="container-fluid page-h  " id="about">
-        <div class="container ">
+        <div class="container pt-5 bg-info">
             <h2>
                 About
             </h2>
         </div>
-        <div class="container " style="">
-            <div class="row   justify-content-center align-items-center ">
-                <div class="col-lg-5 col-sm-10  d-flex justify-content-center   mt-5 img-a">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-5 col-sm-10  d-flex justify-content-center img-a ">
                     <img src="./images/dog.jpg" alt="" class="myPhoto rounded">
                 </div>
-                <div class="col-lg-5 col-sm-10 mt-5 d-flex p-5 text-a  ">
+                <div class="col-lg-5 col-sm-10 d-flex p-5 text-a  ">
                     <p>
                         <br>
                         <br>
@@ -125,29 +134,33 @@
                     </p>
                 </div>
             </div>
-        </div>
     </div>
     <!-- about end -->
 
 
-<!-- Skill -->
-<div class="container-fluid page-h " id="Skills">
-    <div class="container ">
-        <h2>
-             作品影集
-        </h2>
-    </div>
-    <div class="row d-flex justify-content-around  mt-5 ">
-        <div class="col-lg-5 col-sm-10  mt-3 mb-3 me-5 ">
-            <iframe class="rounded" width="800" height="500" src="https://www.youtube.com/embed/AZ24lvMxmfs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
+    <!-- Skill -->
+    <div class="container-fluid page-h " id="Skills">
+        <div class="container ">
+            <h2>
+                作品影集
+            </h2>
         </div>
+        <div class="row d-flex justify-content-around  row-h">
+            <div class="col-lg-5 col-sm-10  mt-3 mb-3 me-5 ">
+                <iframe class="rounded " src="https://www.youtube.com/embed/AZ24lvMxmfs" title="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
 
-        <div class="col-lg-5 col-sm-10 mt-3 mb-3 ">
-            <iframe class="rounded" width="800" height="500" src="https://www.youtube.com/embed/nBlzllOPmEQ?si=oNz58a6qmUMjlMI6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="col-lg-5 col-sm-10 mt-3 mb-3 ">
+                <iframe class="rounded" src="https://www.youtube.com/embed/nBlzllOPmEQ?si=oNz58a6qmUMjlMI6"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
-</div>
 
 
     <!-- Contact -->
@@ -183,16 +196,16 @@
             </div>
         </div>
     </div>
-<!-- Contact end-->
- <!-- footer -->
- <div class="container-fluid mt-5 mb-5">
-    <div class="row">
-        <div class="col text-center">
-            Copyright © 2024 Louis_Jhang. All rights reserved.
+    <!-- Contact end-->
+    <!-- footer -->
+    <div class="container-fluid mt-5 mb-5">
+        <div class="row">
+            <div class="col text-center">
+                Copyright © 2024 Louis_Jhang. All rights reserved.
+            </div>
         </div>
     </div>
-</div>
-<!-- footer end-->
+    <!-- footer end-->
 
 </body>
 
