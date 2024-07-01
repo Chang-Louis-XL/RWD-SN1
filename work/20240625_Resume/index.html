@@ -17,7 +17,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: bottom right;
-            height: 110vh;
+            height: 100vh;
         
         }
 
@@ -30,28 +30,27 @@
         }
 
         .page-h {
-            height: 95vh;
-            padding-top: 10vh;
+            min-height: 95vh;
+            padding-top: 10%;
         }
 
-        .row-h {
-            padding-top: 10vh;
-            height: 75vh;
+   
+
+        .img-a { 
+            width: 70%;
         }
 
-        .img-a {
-            height: 60vh;
-            width: 50%;
+        .wk-mv iframe {
+            width: 80%;
+            height: 40vh;
+           
         }
 
-        .text-a {
-            padding-right: 120px;
+        .map>iframe {
+            width: 90%;
+            height: 50vh;
         }
-
-        iframe {
-            width: 95%;
-            height: 95%;
-        }
+        
     </style>
 </head>
 
@@ -90,7 +89,7 @@
     </nav>
 
 
-    <div class="container-fluid home-bg" style="background-image: url('./images/321516.jpg'); height: 95vh;" id="Home">
+    <div class="container-fluid home-bg" style="background-image: url('./images/321516.jpg');" id="Home">
         <div class="position-absolute bottom-50 start-0 title-text">
             <h1 >Hi I'm Louis.</h1>
             <p class="lead text-white">Life tastes like seafood.You make choices and you don’t look back.</p>
@@ -105,19 +104,21 @@
 
     <!-- about -->
     <div class="container-fluid page-h  " id="about">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-12">
+        <div class="row  d-flex justify-content-center align-items-center text-center  ">
+            <div class="col-12 mb-5">
+                <div class="col-3">
                 <h2>
                     About
                 </h2>
             </div>
-            <div class="col-12 col-lg-5  d-flex justify-content-center  ">
-                <img src="./images/dog.jpg" alt="" class="img-a rounded">
             </div>
-            <div class="col-12 col-lg-5  mb-4 text-a bg-info">
+            <div class="col-12 col-md-5 col-lg-5 ">
+                <img src="./images/dog.jpg" alt="" class="img-a  rounded">
+            </div>
+            <div class="col-12 col-md-5 col-lg-5  text-center">
                 <p>
                     <br>
-                    <br>
+                    <br>~
                     我認為自己是一個非常有愛心和責任感的人，這不僅體現在我對伴侶的呵護上，也體現在我對社會的關愛中。
                     <br>
                     <br>
@@ -135,21 +136,23 @@
 
 
     <!-- Skill -->
-    <div class="container-fluid page-h " id="Skills">
-        <div class="row d-flex justify-content-around  row-h">
-            <div class="col-12">
+    <div class="container-fluid  page-h " id="Skills">
+        <div class="row d-flex justify-content-center align-items-center   text-center wk-mv">
+            <div class="col-12   mb-5">
+                <div class="col-3">
                 <h2>
                     作品影集
                 </h2>
             </div>
-            <div class="col-12 col-lg-6   mt-3 mb-3  bg-info">
+            </div>
+            <div class="col-12 col-lg-6   mb-3">
                 <iframe class="rounded " src="https://www.youtube.com/embed/AZ24lvMxmfs" title="" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
 
-            <div class="col-12 col-lg-6  mt-3 mb-3 bg-info">
+            <div class="col-12 col-lg-6   mb-3">
                 <iframe class="rounded" src="https://www.youtube.com/embed/nBlzllOPmEQ?si=oNz58a6qmUMjlMI6"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -160,13 +163,15 @@
 
 
     <!-- Contact -->
-    <div class="container-fluid page-h " id="Contact">
-        <div class="container ">
-            <h2>
-                Contact
-            </h2>
-        </div>
-        <div class="row d-flex justify-content-end align-items-center ">
+    <div class="container-fluid  page-h " id="Contact">
+        <div class="row  d-flex justify-content-center align-items-center text-center ">
+            <div class="col-12 mb-5">
+                <div class="col-3">
+                <h2>
+                    Contact
+                </h2>
+            </div>
+            </div>
             <div class="col-12 col-lg-4 mt-3 mb-3">
                 <h2>聯絡資訊</h2>
                 <form action="/action_page.php">
@@ -184,15 +189,18 @@
                     </div>
                 </form>
             </div>
-            <div class="col-lg-6 col-sm-10 mt-3 mb-3 ">
-                <iframe class="rounded ms-5"
+            <div class="col-12 col-lg-5 mt-3 mb-3 bg-dark map">
+                <iframe class="rounded "
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14464.872736716057!2d121.49606598715823!3d24.992701100000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9e41ad23f65%3A0x3d9e666d36f39305!2z6ZaL5b-D5a-154mp55Sf5rS76aSo!5e0!3m2!1szh-TW!2stw!4v1719324698001!5m2!1szh-TW!2stw"
-                    width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
     <!-- Contact end-->
+
+
+    
     <!-- footer -->
     <div class="container-fluid mt-5 mb-5">
         <div class="row">
