@@ -28,6 +28,7 @@
                     <th>英文</th>
                     <th>數學</th>
                     <th>總和</th>
+                    <th>平均</th>
                 </tr>
             </thead>
             <tbody id="myTbody">
@@ -83,13 +84,15 @@
 
      data.forEach(function(value,key){
         console.log('value', value);
-   let  sum=parseInt(value.chinese)+parseInt(value.english)+parseInt(value.math);
+   let sum=parseInt(value.chinese)+parseInt(value.english)+parseInt(value.math);
+   let avg = (sum/data.length).toFixed(2);
        core +=  `<tr>
                     <td>${value.name}</td>
                     <td>${value.chinese}</td>  
                     <td>${value.english}</td>
                     <td>${value.math}</td>
                     <td>${sum}</td>
+                    <td>${avg}</td>
                 </tr>`;
 
      })
