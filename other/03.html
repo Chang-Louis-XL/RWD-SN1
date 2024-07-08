@@ -83,62 +83,116 @@
 
 
 
-                const itemTotal = document.querySelectorAll('.itemTotal');
+                // const itemTotal = document.querySelectorAll('.itemTotal');
+                // const itemCount = document.querySelectorAll('.itemCount');
+                // const plusBtns = document.querySelectorAll('.plusBtn');
+                // const cutBtns = document.querySelectorAll('.cutBtn');
+
+
+
+                // plusBtns.forEach((plusBtn, index) => {
+                //     plusBtn.addEventListener('click', function () {
+                //         let itemCountElement = itemCount[index];
+                //         let getItemCountValue = parseInt(itemCountElement.value, 10);
+
+                //         if (getItemCountValue >= 10) {
+                //             return false;
+                //         }
+
+                //         getItemCountValue++;
+                //         itemCountElement.value = getItemCountValue;
+                //     });
+                // });
+
+
+                // cutBtns.forEach((cutBtn, index) => {
+                //     cutBtn.addEventListener('click', function () {
+                //         let itemCountElement = itemCount[index];
+                //         let getItemCountValue = parseInt(itemCountElement.value, 10);
+
+                //         if (getItemCountValue <= 0) {
+                //             return false;
+                //         }
+
+                //         getItemCountValue--;
+                //         itemCountElement.value = getItemCountValue;
+                //     });
+                // });
+
+
+                // itemCount.forEach((value, key) => {
+                //     console.log('value', value);
+                //     console.log('key', key);
+                //     value.addEventListener('change', function () {
+                //         console.log('change ok', key);
+                //         let getDataPrice = Number(this.getAttribute('data-price'));
+                //         let getNumber = Number(this.value);
+                //         console.log('getDataPrice', getDataPrice);
+                //         // console.log('getDataPrice typeof', typeof (getDataPrice));
+                //         // console.log('getNumber', getNumber);
+                //         // console.log('getNumber typeof', typeof (getNumber));
+                //         let tmpTotal = getDataPrice * getNumber;
+                //         // console.log('itemCount', itemCount);
+                //         itemTotal[key].innerText = tmpTotal;
+
+                //         // calResultFun();
+
+                //     });
+                // });
+
+
+
                 const itemCount = document.querySelectorAll('.itemCount');
-                const plusBtns = document.querySelectorAll('.plusBtn');
-                const cutBtns = document.querySelectorAll('.cutBtn');
+const plusBtns = document.querySelectorAll('.plusBtn');
+const cutBtns = document.querySelectorAll('.cutBtn');
+const itemTotal = document.querySelectorAll('.itemTotal');
 
+plusBtns.forEach((plusBtn, index) => {
+    plusBtn.addEventListener('click', function () {
+        let itemCountElement = itemCount[index];
+        let getItemCountValue = parseInt(itemCountElement.value, 10);
 
+        if (getItemCountValue >= 10) {
+            return false;
+        }
 
-                plusBtns.forEach((plusBtn, index) => {
-                    plusBtn.addEventListener('click', function () {
-                        let itemCountElement = itemCount[index];
-                        let getItemCountValue = parseInt(itemCountElement.value, 10);
+        getItemCountValue++;
+        itemCountElement.value = getItemCountValue;
 
-                        if (getItemCountValue >= 10) {
-                            return false;
-                        }
+        // 更新總計
+        let getDataPrice = Number(itemCountElement.getAttribute('data-price'));
+        let tmpTotal = getDataPrice * getItemCountValue;
+        itemTotal[index].innerText = tmpTotal;
+    });
+});
 
-                        getItemCountValue++;
-                        itemCountElement.value = getItemCountValue;
-                    });
-                });
+cutBtns.forEach((cutBtn, index) => {
+    cutBtn.addEventListener('click', function () {
+        let itemCountElement = itemCount[index];
+        let getItemCountValue = parseInt(itemCountElement.value, 10);
 
+        if (getItemCountValue <= 0) {
+            return false;
+        }
 
-                cutBtns.forEach((cutBtn, index) => {
-                    cutBtn.addEventListener('click', function () {
-                        let itemCountElement = itemCount[index];
-                        let getItemCountValue = parseInt(itemCountElement.value, 10);
+        getItemCountValue--;
+        itemCountElement.value = getItemCountValue;
 
-                        if (getItemCountValue <= 0) {
-                            return false;
-                        }
+        // 更新總計
+        let getDataPrice = Number(itemCountElement.getAttribute('data-price'));
+        let tmpTotal = getDataPrice * getItemCountValue;
+        itemTotal[index].innerText = tmpTotal;
+    });
+});
 
-                        getItemCountValue--;
-                        itemCountElement.value = getItemCountValue;
-                    });
-                });
-
-
-                itemCount.forEach((value, key) => {
-                    console.log('value', value);
-                    console.log('key', key);
-                    value.addEventListener('change', function () {
-                        console.log('change ok', key);
-                        let getDataPrice = Number(this.getAttribute('data-price'));
-                        let getNumber = Number(this.value);
-                        console.log('getDataPrice', getDataPrice);
-                        // console.log('getDataPrice typeof', typeof (getDataPrice));
-                        // console.log('getNumber', getNumber);
-                        // console.log('getNumber typeof', typeof (getNumber));
-                        let tmpTotal = getDataPrice * getNumber;
-                        // console.log('itemCount', itemCount);
-                        itemTotal[key].innerText = tmpTotal;
-
-                        // calResultFun();
-
-                    });
-                });
+// itemCount.forEach((value, key) => {
+//     value.addEventListener('change', function () {
+//         let getDataPrice = Number(this.getAttribute('data-price'));
+//         let getNumber = Number(this.value);
+//         let tmpTotal = getDataPrice * getNumber;
+//         itemTotal[key].innerText = tmpTotal;
+//     });
+// });
 
 
 
