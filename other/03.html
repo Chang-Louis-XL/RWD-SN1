@@ -46,6 +46,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="container mt-5">
             <div class="row align-items-center justify-items-center">
                 <div class="col-md-3 text-center">
@@ -56,67 +58,91 @@
 
                 </div>
                 <div class="col-md-3">
-                    <div class="box" id="rate" data-value="50">
+                    <div class="box ">
                         50
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="d-flex">
-                        <button id="cutBtn" type="button" class="btn btn-danger"><i
-                                class="fa-solid fa-minus"></i></button>
-                        <input id="item1Count" class="form-control ms-3" type="number" name="" id="" value="1"
-                            data-price="50" min="0" max="10">
-                        <button id="plusBtn" type="button" class="btn btn-success ms-3"><i
+                        <button type="button" class="btn btn-danger cutBtn"><i class="fa-solid fa-minus"></i></button>
+                        <input class="form-control ms-3 itemCount" type="number" name="" id="" value="1" data-price="50"
+                            min="0" max="10">
+                        <button id="plusBtn" type="button" class="btn btn-success ms-3 plusBtn"><i
                                 class="fa-solid fa-plus"></i></button>
                     </div>
-                    
                 </div>
-                <div class="col-md-3" id="total">
-                    <div class="box">
-                        總金額
-                    </div>
-                </div>
+                <div class="col-md-3 box">
+                    <span class="itemTotal">20</span>
             </div>
-
-            <script>
-                const rate = document.getElementById('rate');
-                const  item1Count = document.getElementById('item1Count');
-               const plusBtn = document.getElementById('plusBtn');
-               const cutBtn = document.getElementById('cutBtn');
-                
+        </div>
 
 
-               plusBtn.addEventListener('click',function() {
-               let getItemCountValue = item1Count.value;
-               if(getItemCountValue>=10){
-                return false;
-               }
-               getItemCountValue++;
-               item1Count.value = getItemCountValue;
-               calTotalFun();
+        
 
-               })
-
-               cutBtn.addEventListener('click',function() {
-                let getItemCountValue = item1Count.value;
-                if(getItemCountValue<=0){
-                return false;
-               }
-               getItemCountValue--;
-               item1Count.value=getItemCountValue;
-               calTotalFun();
-               });
-
-
-               function calTotalFun() {
+        <script>
 
 
 
-               }
-               
-               
-                
-            </script>
+            const itemTotal = document.querySelectorAll('.itemTotal');
+            const itemCount = document.querySelectorAll('.itemCount');
+            const plusBtns = document.querySelectorAll('.plusBtn');
+            const cutBtns = document.querySelectorAll('.cutBtn');
+
+
+
+            plusBtns.forEach((plusBtn, index) => {
+                plusBtn.addEventListener('click', function () {
+                    let itemCountElement = itemCount[index];
+                    let getItemCountValue = parseInt(itemCountElement.value, 10);
+
+                    if (getItemCountValue >= 10) {
+                        return false;
+                    }
+
+                    getItemCountValue++;
+                    itemCountElement.value = getItemCountValue;
+                });
+            });
+
+
+            cutBtns.forEach((cutBtn, index) => {
+                cutBtn.addEventListener('click', function () {
+                    let itemCountElement = itemCount[index];
+                    let getItemCountValue = parseInt(itemCountElement.value, 10);
+
+                    if (getItemCountValue <= 0) {
+                        return false;
+                    }
+
+                    getItemCountValue--;
+                    itemCountElement.value = getItemCountValue;
+                });
+            });
+
+
+            itemCount.forEach((value, key) => {
+                console.log('value', value);
+                console.log('key', key);
+                value.addEventListener('change', function () {
+                    // console.log('change ok', key);
+                    let getDataPrice = Number(this.getAttribute('data-price'));
+                    let getNumber = Number(this.value);
+                    console.log('getDataPrice', getDataPrice);
+                    // console.log('getDataPrice typeof', typeof (getDataPrice));
+                    // console.log('getNumber', getNumber);
+                    // console.log('getNumber typeof', typeof (getNumber));
+                    let tmpTotal = getDataPrice * getNumber;
+                    // console.log('itemCount', itemCount);
+                    itemTotal[key].innerText = tmpTotal;
+
+                    // calResultFun();
+
+                });
+            });
+
+
+
+        </script>
 
 
 
