@@ -58,7 +58,7 @@
 
                 </div>
                 <div class="col-md-3">
-                    <div class="box ">
+                    <div class="box">
                         50
                     </div>
                 </div>
@@ -73,76 +73,76 @@
                 </div>
                 <div class="col-md-3 box">
                     <span class="itemTotal">20</span>
+                </div>
             </div>
-        </div>
-
-
-        
-
-        <script>
 
 
 
-            const itemTotal = document.querySelectorAll('.itemTotal');
-            const itemCount = document.querySelectorAll('.itemCount');
-            const plusBtns = document.querySelectorAll('.plusBtn');
-            const cutBtns = document.querySelectorAll('.cutBtn');
+
+            <script>
 
 
 
-            plusBtns.forEach((plusBtn, index) => {
-                plusBtn.addEventListener('click', function () {
-                    let itemCountElement = itemCount[index];
-                    let getItemCountValue = parseInt(itemCountElement.value, 10);
+                const itemTotal = document.querySelectorAll('.itemTotal');
+                const itemCount = document.querySelectorAll('.itemCount');
+                const plusBtns = document.querySelectorAll('.plusBtn');
+                const cutBtns = document.querySelectorAll('.cutBtn');
 
-                    if (getItemCountValue >= 10) {
-                        return false;
-                    }
 
-                    getItemCountValue++;
-                    itemCountElement.value = getItemCountValue;
+
+                plusBtns.forEach((plusBtn, index) => {
+                    plusBtn.addEventListener('click', function () {
+                        let itemCountElement = itemCount[index];
+                        let getItemCountValue = parseInt(itemCountElement.value, 10);
+
+                        if (getItemCountValue >= 10) {
+                            return false;
+                        }
+
+                        getItemCountValue++;
+                        itemCountElement.value = getItemCountValue;
+                    });
                 });
-            });
 
 
-            cutBtns.forEach((cutBtn, index) => {
-                cutBtn.addEventListener('click', function () {
-                    let itemCountElement = itemCount[index];
-                    let getItemCountValue = parseInt(itemCountElement.value, 10);
+                cutBtns.forEach((cutBtn, index) => {
+                    cutBtn.addEventListener('click', function () {
+                        let itemCountElement = itemCount[index];
+                        let getItemCountValue = parseInt(itemCountElement.value, 10);
 
-                    if (getItemCountValue <= 0) {
-                        return false;
-                    }
+                        if (getItemCountValue <= 0) {
+                            return false;
+                        }
 
-                    getItemCountValue--;
-                    itemCountElement.value = getItemCountValue;
+                        getItemCountValue--;
+                        itemCountElement.value = getItemCountValue;
+                    });
                 });
-            });
 
 
-            itemCount.forEach((value, key) => {
-                console.log('value', value);
-                console.log('key', key);
-                value.addEventListener('change', function () {
-                    // console.log('change ok', key);
-                    let getDataPrice = Number(this.getAttribute('data-price'));
-                    let getNumber = Number(this.value);
-                    console.log('getDataPrice', getDataPrice);
-                    // console.log('getDataPrice typeof', typeof (getDataPrice));
-                    // console.log('getNumber', getNumber);
-                    // console.log('getNumber typeof', typeof (getNumber));
-                    let tmpTotal = getDataPrice * getNumber;
-                    // console.log('itemCount', itemCount);
-                    itemTotal[key].innerText = tmpTotal;
+                itemCount.forEach((value, key) => {
+                    console.log('value', value);
+                    console.log('key', key);
+                    value.addEventListener('change', function () {
+                        // console.log('change ok', key);
+                        let getDataPrice = Number(this.getAttribute('data-price'));
+                        let getNumber = Number(this.value);
+                        console.log('getDataPrice', getDataPrice);
+                        // console.log('getDataPrice typeof', typeof (getDataPrice));
+                        // console.log('getNumber', getNumber);
+                        // console.log('getNumber typeof', typeof (getNumber));
+                        let tmpTotal = getDataPrice * getNumber;
+                        // console.log('itemCount', itemCount);
+                        itemTotal[key].innerText = tmpTotal;
 
-                    // calResultFun();
+                        // calResultFun();
 
+                    });
                 });
-            });
 
 
 
-        </script>
+            </script>
 
 
 
