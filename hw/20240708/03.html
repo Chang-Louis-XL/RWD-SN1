@@ -18,6 +18,8 @@
         padding: 20px;
         text-align: center;
         justify-items: center;
+
+        
     }
 
     img{
@@ -47,7 +49,7 @@
             </div>
             <div class="col-md-3">
                 <div class="box">
-                    總金額
+                    總額
                 </div>
             </div>
         </div>
@@ -74,14 +76,14 @@
                         <button type="button" class="btn btn-danger cutBtn"><i class="fa-solid fa-minus"></i></button>
                         <!-- <input class="form-control ms-3 itemCount" type="number" name="" id="" value="1" data-price="50"
                             min="0" max="10"> -->
-                        <input class="form-control ms-3 itemCount text-center" type="text" name="" id="" value="1" data-price="60"
+                        <input class="form-control ms-3 itemCount text-center" type="text" name="" id="" value="0" data-price="60"
                             min="0" max="10">
                         <button id="plusBtn" type="button" class="btn btn-success ms-3 plusBtn"><i
                                 class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="col-md-3 box">
-                    <span class="itemTotal">20</span>
+                    <span class="itemTotal">0</span>
                 </div>  
 
 
@@ -103,27 +105,27 @@
                         <button type="button" class="btn btn-danger cutBtn"><i class="fa-solid fa-minus"></i></button>
                         <!-- <input class="form-control ms-3 itemCount" type="number" name="" id="" value="1" data-price="50"
                             min="0" max="10"> -->
-                        <input class="form-control ms-3 itemCount text-center" type="text" name="" id="" value="1" data-price="50"
+                        <input class="form-control ms-3 itemCount text-center" type="text" name="" id="" value="0" data-price="50"
                             min="0" max="10">
                         <button id="plusBtn" type="button" class="btn btn-success ms-3 plusBtn"><i
                                 class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="col-md-3 box">
-                    <span class="itemTotal">20</span>
+                    <span class="itemTotal">0</span>
                 </div>
 
                 <!-- 3 -->
                 <div class="col-md-3 mt-2 text-center">
 
                     <img class="rounded"
-                        src="https://media.istockphoto.com/id/543672166/photo/business-woman-with-coffee-cup.jpg?s=2048x2048&w=is&k=20&c=RJEXSLO7P5_kRbDVBke0PxlNbBSKUnxnum4vrPOB2NE="
-                        alt="" width="70%">
+                        src="https://plus.unsplash.com/premium_photo-1670954418690-37e178110999?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VEVBfGVufDB8fDB8fHww"
+                        alt="" width="150px" height="200px">
 
                 </div>
                 <div class="col-md-3">
                     <div class="box">
-                        6000
+                        100
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -131,14 +133,14 @@
                         <button type="button" class="btn btn-danger cutBtn"><i class="fa-solid fa-minus"></i></button>
                         <!-- <input class="form-control ms-3 itemCount" type="number" name="" id="" value="1" data-price="50"
                             min="0" max="10"> -->
-                        <input class="form-control ms-3 itemCount text-center" type="text" name="" id="" value="1" data-price="6000"
+                        <input class="form-control ms-3 itemCount text-center" type="text" name="" id="" value="0" data-price="100"
                             min="0" max="10">
                         <button id="plusBtn" type="button" class="btn btn-success ms-3 plusBtn"><i
                                 class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="col-md-3 box">
-                    <span class="itemTotal">20</span>
+                    <span class="itemTotal">0</span>
                 </div>
             </div>
         </div>
@@ -146,10 +148,12 @@
 
         
 
+        
+
 
             <div class="container mt-2">
                 <div class="result text-center box">
-                    點餐金額總計為 $ <span class="text-primary" id="originPrice"></span> 元
+                    點餐金額共計為 $ <span class="text-primary" id="originPrice"></span> 元
                     <div id="bonus">
                         超過 500 七折 優惠價 <span class="text-danger" id="discountPrice"> $ 700</span> 元
                     </div>
@@ -188,11 +192,13 @@
                 const itemTotal = document.querySelectorAll('.itemTotal');
                 const bonus = document.getElementById('bonus');
 
-                plusBtns.forEach((plusBtn, index) => {
-                    plusBtn.addEventListener('click', function () {
-                        let itemCountElement = itemCount[index];
+                
+                    plusBtns.forEach((value, key) => {
+                       
+                        value.addEventListener('click', function () {
+                        let itemCountElement = itemCount[key];
+                        console.log(itemCountElement);
                         let getItemCountValue = parseInt(itemCountElement.value, 10);
-
                         if (getItemCountValue >= 10) {
                             return false;
                         }
@@ -203,43 +209,41 @@
                         // 更新總計
                         let getDataPrice = Number(itemCountElement.getAttribute('data-price'));
                         let tmpTotal = getDataPrice * getItemCountValue;
-                        itemTotal[index].innerText = tmpTotal;
+                        itemTotal[key].innerText = tmpTotal;
 
                         calResultFun();
                     });
                 });
 
-                cutBtns.forEach((cutBtn, index) => {
-                    cutBtn.addEventListener('click', function () {
-                        let itemCountElement = itemCount[index];
+                cutBtns.forEach((value, key) => {
+                    value.addEventListener('click', function () {
+                        let itemCountElement = itemCount[key];
                         let getItemCountValue = parseInt(itemCountElement.value, 10);
-
                         if (getItemCountValue <= 0) {
                             return false;
                         }
-
                         getItemCountValue--;
                         itemCountElement.value = getItemCountValue;
 
                         // 更新總計
                         let getDataPrice = Number(itemCountElement.getAttribute('data-price'));
                         let tmpTotal = getDataPrice * getItemCountValue;
-                        itemTotal[index].innerText = tmpTotal;
-
+                        itemTotal[key].innerText = tmpTotal;
+                        console.log(value)
                         calResultFun();
                     });
                 });
 
-                itemCount.forEach((value, key) => {
-                    value.addEventListener('change', function () {
-                        let getDataPrice = Number(this.getAttribute('data-price'));
-                        let getNumber = Number(this.value);
-                        let tmpTotal = getDataPrice * getNumber;
-                        itemTotal[key].innerText = tmpTotal;
+                // itemCount.forEach((value, key) => {
+                //     value.addEventListener('change', function () {
+                //         let getDataPrice = Number(this.getAttribute('data-price'));
+                //         let getNumber = Number(this.value);
+                //         let tmpTotal = getDataPrice * getNumber;
+                //         itemTotal[key].innerText = tmpTotal;
 
-                calResultFun();
-                    });
-                });
+                // calResultFun();
+                //     });
+                // });
 
 
 
