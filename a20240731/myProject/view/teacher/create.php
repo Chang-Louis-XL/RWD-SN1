@@ -21,7 +21,7 @@
         </h3>
     </div>
     <div class="container mt-3">
-        <form action="../../api/student/store.php" method="get" id="myForm" enctype="multipart/form-data">
+        <form action="../../api2/teacher/store.php" method="get" id="myForm" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-12 mt-3">
                     <label for="">name</label>
@@ -76,7 +76,7 @@
                 console.log('data', data);
 
                 // ajax
-                url = "../../api/student/store.php";
+                url = "../../api2/teacher/store.php";
                 $.ajax({
                     type: "get",
                     url: url,
@@ -88,7 +88,7 @@
                         let result = res.msg;
                         if (result = "ok") {
                             console.log('ajax insert ok');
-                            // window.location.href = "http://localhost";
+                            window.location.href = "./index.php";
                         }
                     }
                 });

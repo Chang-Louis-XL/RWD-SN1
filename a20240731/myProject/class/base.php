@@ -7,7 +7,7 @@ class DB
     protected $table;
     protected $conn;
 
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db15";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db0722";
 
     public function __construct($table)
     {
@@ -100,11 +100,13 @@ class DB
     // add
     public function store($data)
     {   
+
+        $table = $this->table;
         $data['name'] = $data['name'];
 
         $sql = "
         INSERT INTO
-            `students` (`id`, `name`, `mobile`)
+            `$table` (`id`, `name`, `mobile`)
         VALUES
             (NULL, '{$data['name']}', '{$data['mobile']}');
         ";
@@ -169,7 +171,7 @@ class DB
         $table = $this->table;
         $sql = "TRUNCATE TABLE `db0722`.`$table`";
         $this->conn->query($sql);
-        echo $sql;
+        // echo $sql;
         $sql = "INSERT INTO
                     `$table` (`id`, `name`, `mobile`)
                 VALUES
@@ -177,11 +179,11 @@ class DB
                     (NULL, 'bob', '0922-222-222'),
                     (NULL, 'cat', '0933-333-333'),
                     (NULL, 'dog', '0944-444-444');";
-        // $data = $this->conn->exec($sql);
+        $data = $this->conn->exec($sql);
         // $data = $this->conn->query($sql);
         // dd($data);
 
-        // header('Location: ../../view/teacher/index.php');
+        header('Location: ../../view/teacher/index.php');
         exit();
     }
 }

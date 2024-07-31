@@ -88,7 +88,7 @@
                         let result = res.msg;
                         if (result = "ok") {
                             console.log('ajax insert ok');
-                            // window.location.href = "http://localhost";
+                             window.location.href = "./index.php"
                         }
                     }
                 });

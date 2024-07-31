@@ -1,7 +1,7 @@
 <?php 
     include "../../class/base.php";
     $data = $_GET;
-    $students = new DB('students');
+    $teachers = new DB('teachers');
     // $data = $students->getAllSetRank();
     
     // dd($data);
@@ -12,7 +12,7 @@
     //     [mobile] => 123
     // )
 
-    $students->store($data);
+    $teachers->store($data);
     $result = [
         'msg' => 'ok',
         'data' => $data,
