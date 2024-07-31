@@ -59,8 +59,8 @@ class DB
             (NULL, '{$data['name']}', '{$data['mobile']}');
         ";
         $this->conn->query($sql);
-        header('Location: http://localhost');
-        exit();
+        // header('Location: http://localhost');
+        // exit();
     }
 
 
