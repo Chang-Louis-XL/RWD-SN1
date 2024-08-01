@@ -58,17 +58,17 @@
                 e.preventDefault();
                 console.log('submit ok');
 
-                // let data = $(this).serialize();
-                let data = $(this).serializeArray();
+                let data = $(this).serialize();
+                // let data = $(this).serializeArray();
                 // console.log('data', data);
                 // console.log('typeof(data)', typeof(data));
 
                 // 方法一 xxx
-                let tmpObj = {
-                    'name': 'address',
-                    'mobile': 'taipei'
-                };
-                data.push(tmpObj);
+                // let tmpObj = {
+                //     'name': 'address',
+                //     'mobile': 'taipei'
+                // };
+                // data.push(tmpObj);
                 // console.log(data);;
 
                 // 方法二
@@ -88,7 +88,7 @@
                         let result = res.msg;
                         if (result = "ok") {
                             console.log('ajax insert ok');
-                            window.location.href = "./index.php";
+                            // window.location.href = "./index.php";
                         }
                     }
                 });

@@ -1,11 +1,11 @@
 <?php
 include "../../class/base.php";
 
-$teachers = new DB('teachers');
+$students = new DB('students');
 // $data = $students->getAll();
 // $data = $students->setRank();
 // $data = $students->getAllSetRank();
-$data = $teachers->getAllSetRank();
+$data = $students->getAllSetRank();
 
 // $appleDB = new DB('students');
 // $data = $appleDB->getAll();
@@ -65,12 +65,26 @@ $data = $teachers->getAllSetRank();
 
 <body>
 
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a href=http://localhost/RWD-SN1/a20240731/myProject/view/teachers/ class="nav-link text-white">teachers</a>
+                </li>
+                <li class="nav-item">
+                <a href=http://localhost/RWD-SN1/a20240731/myProject/view/student/ class="nav-link text-white">studemt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mt-3">
-        <h2>teachers List</h2>
+        <h2>Students List</h2>
         <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>
         <div class="text-end">
             <!-- <button type="button" class="btn btn-success">Add</button> -->
-            <a class="btn btn-danger" href="../../api2/teacher/rollback.php">rollback</a>
+            <a class="btn btn-danger" href="../../api/student/rollback.php">rollback</a>
             <a class="btn btn-success" href="./create.php">Add</a>
         </div>
         <table class="table table-bordered mt-3 text-center">

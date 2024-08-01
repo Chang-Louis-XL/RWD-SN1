@@ -65,6 +65,20 @@ $data = $students->getAllSetRank();
 
 <body>
 
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a href=http://localhost/RWD-SN1/a20240731/myProject/view/teachers/ class="nav-link text-white">teachers</a>
+                </li>
+                <li class="nav-item">
+                <a href=http://localhost/RWD-SN1/a20240731/myProject/view/student/ class="nav-link text-white">studemt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mt-3">
         <h2>Students List</h2>
         <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>

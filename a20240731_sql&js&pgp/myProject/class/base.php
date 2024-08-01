@@ -158,9 +158,11 @@ class DB
     // del
     public function del($id)
     {
-        $sql = "DELETE FROM students WHERE `students`.`id` = $id";
+
+        $table = $this->table;
+        $sql = "DELETE FROM `$table` WHERE `$table`.`id` = $id";
         $this->conn->exec($sql);
-        header('Location: ../../view/student/index.php');
+        header("Location: ../../view/$table/index.php");
         exit();
     }
 
@@ -183,7 +185,7 @@ class DB
         // $data = $this->conn->query($sql);
         // dd($data);
 
-        header('Location: ../../view/teacher/index.php');
+        header("Location: ../../view/$table/index.php");
         exit();
     }
 }
